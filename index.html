@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+<tital title="... STORE"><small>...Store</small></tital>
+<hr>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 15px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.footer
+{
+background-color:black;
+padding: 10px;
+text-align: left;
+}
+
+body{
+font-family:Copperplate, Papyrus, fantasy;
+}
+
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: white;
+  color: black;
+  font-size: 19px;
+  padding: 20px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.container .btn:hover {
+  background-color: black;
+  color: white;
+}
+
+
+
+body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .product-list, .product-details {
+            max-width: 600px;
+            margin: auto;
+        }
+        .product-item {
+            background: #fff;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            cursor: pointer; /* Add cursor pointer */
+        }
+        .product-details {
+            display: none; /* Hidedetails by default */
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .product-details img {
+            max-width: 100%;
+            height: auto;
+        }
+        .price {
+            font-size: 1.5em;
+            color: #2c3e50;
+        }
+        .quantity, .size {
+            margin-top: 15px;
+        }
+        button {
+            margin-top: 20px;
+        }
+</style>
+</head>
+
+<body style="background-color:white;">
+<hr>
+<h1 id="home"></h1>
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+<hr>
+<hr>
+<h1 id="news"></h1>
+<div class="container">
+  <img src="https://github.com/Atallah88/store/blob/main/5.jpg?raw=true" alt="Snow" style="width:100%">
+  <button class="btn"><a href="#shopnew">Shop New</a></button>
+</div>
+
+
+<hr>
+<hr>
+<h1 id="shopnew"></h1>
+<div class="product-list">
+        <div class="product-item" onclick="showDetails('product1')">
+            <h2>Hoodie</h2>
+            <p></p>
+        </div>
+        <div class="product-item" onclick="showDetails('product2')">
+            <h2>Hoodie</h2>
+            <p></p>
+        </div>
+    </div>
+    <div class="product-details" id="product1">
+        <h1>Hoodie</h1>
+        <img src="https://github.com/Atallah88/store/blob/main/3b.jpg?raw=true" alt="صورة المنتج 1">
+        <p class="price">KDسعر المنتج: .15</p>
+        <p></p>
+        <div class="quantity">
+            <label for="quantity1">عدد الكمية:</label>
+            <input type="number" id="quantity1" name="quantity1" min="1" value="1">
+
+</div><div class="size">
+            <label for="size1">المقاس:</label>
+            <select id="size1" name="size1">
+                <option value="small">صغير</option>
+                <option value="medium">متوسط</option>
+                <option value="large">كبير</option>
+            </select>
+        </div>
+        <button onclick="hideDetails()">عودة</button>
+    </div>
+    <div class="product-details" id="product2">
+        <h1>Hoodie</h1>
+        <img src="https://github.com/Atallah88/store/blob/main/6.jpg?raw=true" alt="صورة المنتج 2">
+        <p class="price">KDسعر المنتج: .15</p>
+        <p></p>
+        <div class="quantity">
+
+<label for="quantity2">عدد الكمية:</label>
+            <input type="number" id="quantity2" name="quantity2" min="1" value="1">
+        </div>
+        <div class="size">
+            <label for="size2">المقاس:</label>
+            <select id="size2" name="size2">
+                <option value="small">صغير</option>
+                <option value="medium">متوسط</option>
+                <option value="large">كبير</option>
+            </select>
+        </div>
+        <button onclick="hideDetails()">عودة</button></div>
+
+
+<script>
+        function showDetails(productId) {
+            // Hide all product details
+            var details = document.querySelectorAll('.product-details');
+            details.forEach(function(detail) {
+                detail.style.display = 'none';
+            });
+
+            // Show the selected product details
+            document.getElementById(productId).style.display = 'block';
+        }
+
+        function hideDetails() {
+            // Hide all product details
+            var details = document.querySelectorAll('.product-details');
+            details.forEach(function(detail) {
+                detail.style.display = 'none';
+            });
+        }
+    </script>
+
+<hr>
+<h1 id="about"></h1>
+<h1 id="contact"></h1>
+<div class="footer">
+<a title="MD SHOPQ8 INSTAGRAM"href="https://www.instagram.com/ia_di8?"><img src="Pic/images.png"style="wedth:42px;height:30px;</a>
+<img src="Pic/images.png">
+</div>
+</body>
+</html>
